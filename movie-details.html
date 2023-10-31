@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details X</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link id="stylesheet-details" rel="stylesheet" href="style-details.css">
+</head>
+
+<body>
+
+    <header>
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="index.html" id="triggerButton">TV</a>
+            <a href="index.html" id="triggerButton2">Movies</a>
+        </nav>
+    </header>
+
+    <button id="toggleStyleButton" class="autoClickButton3" style="display: none;">Light Theme</button>
+
+    <main>
+        <section class="movie-details">
+            <div class="poster">
+                <img id="movieImage" src="" alt="Movie Poster">
+            </div>
+            <div class="info">
+                <h1 id="movieTitle">Loading...</h1>
+                <br>
+                <br>
+                <p id="movieType">Type: Loading...</p>
+                <br>
+                <p id="movieReleaseDate">Release Date: Loading...</p>
+                <br>
+                <p id="movieRating">IMDb Rating: Loading...</p>
+                <br>
+                <p id="movieGenre">Genre: Loading...</p>
+                <br>
+                <p id="moviePlot">Loading plot...</p>
+                <br>
+                <p id="movieCast">Main Cast: Loading...</p>
+                <br>
+                <p id="movieLanguage"> Language: Loading...</p>
+                <br>
+                <p id="movieAwards"> Nominations: Loading...</p>
+                <br>
+                <p id="movieBoxOffice"> Box Office: Loading...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Movie Database X by Bahaa Almasri</p>
+    </footer>
+
+    <script src="script-details.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Function to set a flag in localStorage when the button is clicked
+        document.getElementById("triggerButton").addEventListener("click", function () {
+            localStorage.setItem("triggered", "true");
+            window.location.href = "index.html";
+        });
+
+        // Function to set a flag in localStorage when the button is clicked
+        document.getElementById("triggerButton2").addEventListener("click", function () {
+            localStorage.setItem("triggered2", "true");
+            window.location.href = "index.html";
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if the "triggered" flag is set in localStorage
+            const triggered3 = localStorage.getItem("triggered3");
+            if (triggered3 === "true") {
+                // Auto-click the button with the class name "autoClickButton" if the flag is set
+                const buttons = document.getElementsByClassName("autoClickButton3");
+                if (buttons.length > 0) {
+                    buttons[0].click(); // Click the first button with the class "autoClickButton"
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

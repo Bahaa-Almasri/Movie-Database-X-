@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Database X</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link id="stylesheet" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button id="styleToggle" class="triggerButton3" onclick="toggleStyle()">Toggle Theme</button>
+
+    <header class="main-header">
+        <h1 class="site-title hidden">Movie Database X</h1>
+    </header>
+
+    <header>
+
+        <nav>
+            <ul>
+                <li><a href="#" id="homeLink">Home</a></li>
+                <li><a href="#" id="moviesLink" class="autoClickButton2">Movies</a></li>
+                <li><a href="#" id="tvShowsLink" class="autoClickButton">TV Shows</a></li>
+                <!--
+                <li><a href="#" id="watchListLink">WatchList</a></li>
+                -->
+            </ul>
+        </nav>
+
+        <div class="search-container">
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Search for a Movie or TV Show">
+                <button id="searchButton">Search</button>
+            </div>
+            <div id="suggestionsContainer"></div>
+            <div id="savedSearchesContainer" class="saved-search-container">
+                <!-- Saved search items will be populated here -->
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="movie-details" id="main-div">
+
+            <div class="poster">
+                <img id="movieImage" src="poster.jpg" alt="Movie Poster">
+            </div>
+
+            <div class="info">
+                <h1 id="movieTitle" style="font-family:Georgia, 'Times New Roman', Times, serif;
+                font-size: 30px; margin-bottom: 20px;" ;>Oppenheimer</h1>
+                <br>
+                <p id="releaseDate">Release Date: Loading...</p>
+                <br>
+                <p id="movieRating1">IMDb Rating: Loading... <i class="fas fa-star" style="color: yellow;"></i></p>
+                <br>
+                <p id="movieDescription">Plot: Loading...</p>
+                <br>
+                <p id="movieGenres">Genres: Loading...</p>
+                <br>
+                <p id="movieDetails"></p>
+            </div>
+
+        </section>
+
+        <h2 id="mediaTypeHeading" style="display: none;"></h2>
+
+        <section class="movie-list">
+            <div class="movie">
+                <div class="movie-image">
+                </div>
+                <div class="movie-info">
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-media">
+            <h2>Popular Movies</h2>
+            <div class="media-list popular-movies">
+                <!-- Popular movies will be added here -->
+            </div>
+        </section>
+
+        <section class="popular-media">
+            <h2>Popular TV Shows</h2>
+            <div class="media-list popular-tv-shows">
+                <!-- Popular TV shows will be added here -->
+            </div>
+        </section>
+
+        <section class="highest-rated-movies">
+            <h2>Highest Rated Movies</h2>
+            <div class="media-list highest-rated-movie-list"></div>
+        </section>
+
+        <section class="highest-rated-tv-shows">
+            <h2>Highest Rated TV Shows</h2>
+            <div class="media-list highest-rated-tv-show-list"></div>
+        </section>
+
+        <section class="new-releases">
+            <h2>New Releases</h2>
+            <div class="media-list new-releases-list">
+                <!-- New releases will be added here -->
+            </div>
+        </section>
+    </main>
+
+    <div id="loader" class="loader">
+        <img src="loader.gif" alt="Loading...">
+    </div>
+
+    <div id="preloader" class="preloader">
+        <h1>Movie Database</h1>
+        <img src="preloader.gif" alt="Loading...">
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Movie Database X by Bahaa Almasri</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="script-details.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if the "triggered" flag is set in localStorage
+            const triggered = localStorage.getItem("triggered");
+            if (triggered === "true") {
+                // Auto-click the button with the class name "autoClickButton" if the flag is set
+                const buttons = document.getElementsByClassName("autoClickButton");
+                if (buttons.length > 0) {
+                    buttons[0].click(); // Click the first button with the class "autoClickButton"
+                }
+                // Clear the flag to prevent auto-clicking on subsequent visits
+                localStorage.removeItem("triggered");
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if the "triggered" flag is set in localStorage
+            const triggered2 = localStorage.getItem("triggered2");
+            if (triggered2 === "true") {
+                // Auto-click the button with the class name "autoClickButton" if the flag is set
+                const buttons = document.getElementsByClassName("autoClickButton2");
+                if (buttons.length > 0) {
+                    buttons[0].click(); // Click the first button with the class "autoClickButton"
+                }
+                // Clear the flag to prevent auto-clicking on subsequent visits
+                localStorage.removeItem("triggered2");
+            }
+        });
+
+        // Function to set a flag in localStorage when the button is clicked
+        document.getElementById("styleToggle").addEventListener("click", function () {
+            localStorage.setItem("triggered3", "true");
+        })
+    </script>
+
+</body>
+
+</html>

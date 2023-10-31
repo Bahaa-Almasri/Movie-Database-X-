@@ -1,0 +1,222 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    scrollbar-width: thin;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 10px 0;
+    /* Add any header styles you need */
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.movie-details {
+    display: flex;
+    /* Adjust spacing as needed */
+    margin-bottom: 20px;
+}
+
+.poster {
+    flex: 1;
+}
+
+.poster img {
+    max-width: 100%;
+    height: auto;
+}
+
+.info {
+    flex: 2;
+    padding: 20px;
+    background-color: #2d2d2d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.movie-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.movie-details {
+    display: flex;
+    margin-top: 3rem;
+}
+
+.poster {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.poster img {
+    max-width: 100%;
+    border: 4px solid #fff;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+.info {
+    flex: 2;
+    color: #fff;
+}
+
+.movie-title {
+    font-size: 2rem;
+    color: var(--yellow-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.movie-misc-info {
+    list-style-type: none;
+    padding: 0.5rem 0;
+}
+
+.movie-misc-info li {
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+.genre,
+.writer,
+.actors,
+.plot,
+.language,
+.awards {
+    margin: 1rem 0;
+}
+
+.awards i {
+    color: var(--yellow-color);
+    margin-right: 0.7rem;
+}
+
+
+.detail {
+    margin-bottom: 10px;
+}
+
+.detail b {
+    font-weight: bold;
+    display: inline-block;
+    min-width: 150px;
+}
+
+.detail span {
+    display: inline-block;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #1a1a1a;
+    /* Darker footer background */
+    color: #ffffff;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 16px;
+    /* Adjust the width as desired */
+    /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+    /* Background color of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #3e3e3e;
+    /* Dark gray color for the scrollbar thumb */
+    border-radius: 5px;
+    /* Rounded corners for the thumb */
+    border: none;
+    /* Remove border */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #5c5c5c;
+    /* Lighter color on hover */
+}
+
+/* Add this style to position the button */
+#toggleStyleButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Add hover effect */
+#toggleStyleButton:hover {
+    background-color: #555;
+}
+
+/* Add transition for smoother effect */
+#toggleStyleButton {
+    transition: background-color 0.3s ease-in-out;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 10px 0;
+    position: relative;
+}
+
+header a {
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    font-size: 18px;
+    top: 20px;
+    background-color: #333;
+    padding: 15px 30px;
+}
+
+header a:hover {
+    color: #ffffff;
+}
+
+#main-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    color: white;
+    margin-bottom: -50px; /* Adjust as needed to reduce the bottom margin */
+}
