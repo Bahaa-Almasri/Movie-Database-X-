@@ -69,8 +69,8 @@ function toggleStyle() {
 // Call applyStyle() after the page loads to apply the saved style or default style
 window.addEventListener('load', applyStyle);
 
-const apiKey = "4ee0f515";
-const tmdbApiKey = "175573440a7c61926149eb3bd90c26d4";
+const apiKey = "";
+const tmdbApiKey = "";
 
 const searchButton = document.getElementById("searchButton");
 const homeLink = document.getElementById("homeLink");
