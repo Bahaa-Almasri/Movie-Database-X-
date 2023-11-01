@@ -1,5 +1,5 @@
-const apiKey = "4ee0f515";
-const tmdbApiKey = "175573440a7c61926149eb3bd90c26d4";
+const apiKey = "";
+const tmdbApiKey = "";
 
 document.addEventListener("DOMContentLoaded", () => {
     const movieTitle = getMovieTitleFromQueryString();
